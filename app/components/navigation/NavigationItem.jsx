@@ -17,4 +17,5 @@ var NavigationItem = React.createClass(
       }
   }
 );
+
 module.exports = NavigationItem;

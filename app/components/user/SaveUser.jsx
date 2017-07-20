@@ -15,8 +15,10 @@ var SaveUser = React.createClass(
         currentContext.props.callback("Loading ...");
         OpenweatherMap.getTemp(name).then(
           function(data){
+            debugger;
             currentContext.props.callback(name+" "+data);
           },function(error){
+            debugger;            
             console.log(error.message);
             currentContext.props.callback(error.message);
           });
