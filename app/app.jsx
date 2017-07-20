@@ -4,12 +4,18 @@ var {Route,Router,IndexRoute,hashHistory}  = require("react-router")
 
 var Main = require('./components/Main')
 var ClientList = require('./components/ClientList')
-var NewClient = require('./components/NewClient')
+var SaveClient = require('./components/SaveClient')
+var UserList = require('./components/UserList')
+var SaveUser = require('./components/SaveUser')
+
 
 ReactDOM.render(
   <Router history={hashHistory}>
       <Route path="/" component={Main} >
-        <Route path="NewClient" component={NewClient} />
+        <Route path="SaveClient" component={SaveClient} />
+        <Route path="ClientList" component={ClientList} />
+        <Route path="UserList" component={UserList} />
+        <Route path="SaveUser" component={SaveUser} />
         <IndexRoute component={ClientList} />
       </Route>
 

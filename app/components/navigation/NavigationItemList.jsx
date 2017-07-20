@@ -7,10 +7,12 @@ var NavigationItemList = React.createClass(
       render : function(){
         return (
           <div>
-            <NavigationItem name="React Weather"></NavigationItem>
-            <NavigationItem name="Get Weather"></NavigationItem>
-            <NavigationItem name="About"></NavigationItem>
-            <NavigationItem name="Example"></NavigationItem>
+            <NavigationItem to="/" name="Home"></NavigationItem>
+            <NavigationItem to="/ClientList" name="ClientList"></NavigationItem>
+            <NavigationItem to="/SaveClient" name="SaveClient"></NavigationItem>
+
+              <NavigationItem to="/UserList" name="UserList"></NavigationItem>
+              <NavigationItem to="/SaveUser" name="SaveUser"></NavigationItem>
           </div>
         );
       }
