@@ -10,9 +10,7 @@ var NavigationItemList = React.createClass(
             <NavigationItem to="/" name="Home"></NavigationItem>
             <NavigationItem to="/ClientList" name="ClientList"></NavigationItem>
             <NavigationItem to="/SaveClient" name="SaveClient"></NavigationItem>
-
-              <NavigationItem to="/UserList" name="UserList"></NavigationItem>
-              <NavigationItem to="/SaveUser" name="SaveUser"></NavigationItem>
+            <NavigationItem to="/User" name="User"></NavigationItem>
           </div>
         );
       }

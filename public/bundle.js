@@ -58,8 +58,7 @@
 	var Main = __webpack_require__(216);
 	var ClientList = __webpack_require__(222);
 	var SaveClient = __webpack_require__(223);
-	var UserList = __webpack_require__(224);
-	var SaveUser = __webpack_require__(225);
+	var User = __webpack_require__(224);
 
 	ReactDOM.render(React.createElement(
 	  Router,
@@ -69,8 +68,7 @@
 	    { path: '/', component: Main },
 	    React.createElement(Route, { path: 'SaveClient', component: SaveClient }),
 	    React.createElement(Route, { path: 'ClientList', component: ClientList }),
-	    React.createElement(Route, { path: 'UserList', component: UserList }),
-	    React.createElement(Route, { path: 'SaveUser', component: SaveUser }),
+	    React.createElement(Route, { path: 'User', component: User }),
 	    React.createElement(IndexRoute, { component: ClientList })
 	  )
 	), document.getElementById('app'));
@@ -25214,8 +25212,7 @@
 	      React.createElement(NavigationItem, { to: '/', name: 'Home' }),
 	      React.createElement(NavigationItem, { to: '/ClientList', name: 'ClientList' }),
 	      React.createElement(NavigationItem, { to: '/SaveClient', name: 'SaveClient' }),
-	      React.createElement(NavigationItem, { to: '/UserList', name: 'UserList' }),
-	      React.createElement(NavigationItem, { to: '/SaveUser', name: 'SaveUser' })
+	      React.createElement(NavigationItem, { to: '/User', name: 'User' })
 	    );
 	  }
 	});
@@ -25240,9 +25237,9 @@
 	    return React.createElement(
 	      Link,
 	      { to: this.props.to },
-	      ' ',
+	      ' ~ ',
 	      this.props.name,
-	      ' '
+	      ' ~ : '
 	    );
 	  }
 	});
@@ -25344,19 +25341,25 @@
 
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(158);
+	var SaveUser = __webpack_require__(225);
 
-	var UserList = React.createClass({
-	  displayName: 'UserList',
+	var User = React.createClass({
+	    displayName: 'User',
 
-	  render: function render() {
-	    return React.createElement(
-	      'div',
-	      null,
-	      'User List'
-	    );
-	  }
+	    render: function render() {
+	        return React.createElement(
+	            'div',
+	            null,
+	            React.createElement(
+	                'span',
+	                null,
+	                'User '
+	            ),
+	            React.createElement(SaveUser, null)
+	        );
+	    }
 	});
-	module.exports = UserList;
+	module.exports = User;
 
 /***/ }),
 /* 225 */
@@ -25374,7 +25377,16 @@
 	    return React.createElement(
 	      'div',
 	      null,
-	      'Save User'
+	      React.createElement(
+	        'form',
+	        null,
+	        React.createElement('input', { type: 'text' }),
+	        React.createElement(
+	          'button',
+	          null,
+	          'Save User'
+	        )
+	      )
 	    );
 	  }
 	});

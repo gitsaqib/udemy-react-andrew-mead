@@ -4,7 +4,7 @@ var {Link}  = require('react-router')
 var NavigationItem = React.createClass(
   {
       render : function(){
-                return (<Link to={this.props.to} > {this.props.name} </Link>);
+                return (<Link to={this.props.to} > ~ {this.props.name} ~ : </Link>);
       }
   }
 );
