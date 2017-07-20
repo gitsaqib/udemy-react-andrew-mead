@@ -25209,7 +25209,7 @@
 	    return React.createElement(
 	      'div',
 	      null,
-	      React.createElement(NavigationItem, { to: '/', name: 'Home' }),
+	      React.createElement(NavigationItem, { isIndex: true, to: '/', name: 'Home' }),
 	      React.createElement(NavigationItem, { to: '/ClientList', name: 'ClientList' }),
 	      React.createElement(NavigationItem, { to: '/SaveClient', name: 'SaveClient' }),
 	      React.createElement(NavigationItem, { to: '/User', name: 'User' })
@@ -25228,19 +25228,35 @@
 	var ReactDOM = __webpack_require__(158);
 
 	var _require = __webpack_require__(159),
-	    Link = _require.Link;
+	    Link = _require.Link,
+	    IndexLink = _require.IndexLink;
 
 	var NavigationItem = React.createClass({
 	  displayName: 'NavigationItem',
 
+	  defaultProps: function defaultProps() {
+	    isIndex: false;
+	  },
 	  render: function render() {
-	    return React.createElement(
-	      Link,
-	      { to: this.props.to },
-	      ' ~ ',
-	      this.props.name,
-	      ' ~ : '
-	    );
+	    var link = null;
+	    if (this.props.isIndex) {
+	      link = React.createElement(
+	        IndexLink,
+	        { to: this.props.to, activeClassName: 'active' },
+	        ' ~ ',
+	        this.props.name,
+	        ' ~ : '
+	      );
+	    } else {
+	      link = React.createElement(
+	        Link,
+	        { to: this.props.to, activeClassName: 'active' },
+	        ' ~ ',
+	        this.props.name,
+	        ' ~ : '
+	      );
+	    }
+	    return link;
 	  }
 	});
 	module.exports = NavigationItem;

@@ -7,7 +7,7 @@ var NavigationItemList = React.createClass(
       render : function(){
         return (
           <div>
-            <NavigationItem to="/" name="Home"></NavigationItem>
+            <NavigationItem isIndex={true} to="/" name="Home"></NavigationItem>
             <NavigationItem to="/ClientList" name="ClientList"></NavigationItem>
             <NavigationItem to="/SaveClient" name="SaveClient"></NavigationItem>
             <NavigationItem to="/User" name="User"></NavigationItem>

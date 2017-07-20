@@ -1,10 +1,19 @@
 var React = require('react')
 var ReactDOM = require('react-dom')
-var {Link}  = require('react-router')
+var {Link,IndexLink}  = require('react-router')
 var NavigationItem = React.createClass(
   {
-      render : function(){
-                return (<Link to={this.props.to} > ~ {this.props.name} ~ : </Link>);
+      defaultProps : function (){
+        isIndex: false
+      }
+      ,render : function(){
+        var link = null;
+        if(this.props.isIndex) {
+          link = (<IndexLink to={this.props.to}  activeClassName="active"> ~ {this.props.name} ~ : </IndexLink>);
+        }else {
+          link = (<Link to={this.props.to}  activeClassName="active"> ~ {this.props.name} ~ : </Link>);
+        }
+        return (link);
       }
   }
 );
