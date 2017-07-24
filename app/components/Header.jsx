@@ -4,17 +4,14 @@ var NavigationItemList = require('./navigation/NavigationItemList')
 var SigninInfo = require('./user/SigninInfo')
 var Logo = require('./Logo')
 
-var Header = React.createClass(
+var Header = (props) =>
   {
-      render : function(){
-                return (
-                  <div >
-                    <Logo />
-                    <NavigationItemList />
-                    <SigninInfo />
-                  </div>
-                );
-      }
+        return (
+          <div >
+            <Logo />
+            <NavigationItemList />
+            <SigninInfo />
+          </div>
+        );
   }
-);
 module.exports = Header;

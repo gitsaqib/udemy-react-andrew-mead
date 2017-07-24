@@ -2,9 +2,8 @@ var React = require('react')
 var ReactDOM = require('react-dom')
 var NavigationItem = require('./NavigationItem')
 
-var NavigationItemList = React.createClass(
+var NavigationItemList = ()=>
   {
-      render : function(){
         return (
           <div>
             <NavigationItem isIndex={true} to="/" name="Home"></NavigationItem>
@@ -13,7 +12,5 @@ var NavigationItemList = React.createClass(
             <NavigationItem to="/User" name="User"></NavigationItem>
           </div>
         );
-      }
   }
-);
 module.exports = NavigationItemList;
