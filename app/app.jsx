@@ -6,7 +6,8 @@ var Main = require('./components/Main')
 var ClientList = require('./components/ClientList')
 var SaveClient = require('./components/SaveClient')
 var User = require('./components/user/User')
-
+require('style!css!foundation-sites/dist/foundation.min.css');
+$(document).foundation();
 
 ReactDOM.render(
   <Router history={hashHistory}>
