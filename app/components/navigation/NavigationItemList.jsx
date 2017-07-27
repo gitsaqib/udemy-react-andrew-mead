@@ -5,12 +5,17 @@ var NavigationItem = require('./NavigationItem')
 var NavigationItemList = ()=>
   {
         return (
-          <div>
-            <NavigationItem isIndex={true} to="/" name="Home"></NavigationItem>
-            <NavigationItem to="/ClientList" name="ClientList"></NavigationItem>
-            <NavigationItem to="/SaveClient" name="SaveClient"></NavigationItem>
-            <NavigationItem to="/User" name="User"></NavigationItem>
-          </div>
+          <ul className="menu">
+            <li>
+                    <NavigationItem to="/ClientList" name="ClientList"></NavigationItem>
+            </li>
+            <li>
+                    <NavigationItem to="/SaveClient" name="SaveClient"></NavigationItem>
+            </li>
+            <li>
+                    <NavigationItem to="/User" name="User"></NavigationItem>
+            </li>
+          </ul>
         );
   }
 module.exports = NavigationItemList;

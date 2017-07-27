@@ -1,12 +1,11 @@
 var React = require('react')
 var ReactDOM = require('react-dom')
+var {Link,IndexLink}  = require('react-router')
 
-var Logo = (props) =>
+var Logo = () =>
 {
       return (
-        <div >
-            Logo
-        </div>
+                <IndexLink to="/"  activeClassName="active">Logo</IndexLink>
       );
 };
 module.exports = Logo;

@@ -7,10 +7,19 @@ var Logo = require('./Logo')
 var Header = (props) =>
   {
         return (
-          <div >
-            <Logo />
-            <NavigationItemList />
-            <SigninInfo />
+          <div className="top-bar">
+            <div className="top-bar-left">
+              <ul className="menu">
+                <li><Logo /></li>
+                <li>
+                    <NavigationItemList />
+                </li>
+              </ul>
+            </div>
+            <div className="top-bar-right">
+              <SigninInfo />
+            </div>
+
           </div>
         );
   }
