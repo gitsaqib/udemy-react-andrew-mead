@@ -1,6 +1,6 @@
 var React = require('react')
 var ReactDOM = require('react-dom')
-var SaveUser = require('./SaveUser')
+var UserForm = require('./UserForm')
 var Message = require('../Message')
 
 var User = React.createClass(
@@ -19,8 +19,8 @@ var User = React.createClass(
       render : function(){
                 return (
                   <div >
-                      <span>User </span>
-                      <SaveUser callback={this.valueReceiver}/>
+                      <h1 className="text-center">Save User  </h1>
+                      <UserForm callback={this.valueReceiver}/>
                       <Message message={this.state.message} ></Message>
                   </div>
                 );

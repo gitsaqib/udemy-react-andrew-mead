@@ -13,7 +13,13 @@ var NavigationItemList = ()=>
                     <NavigationItem to="/SaveClient" name="SaveClient"></NavigationItem>
             </li>
             <li>
-                    <NavigationItem to="/User" name="User"></NavigationItem>
+                    <NavigationItem to="/UserList" name="UserList"></NavigationItem>
+            </li>
+            <li>
+                    <NavigationItem to="/User" name="SaveUser"></NavigationItem>
+            </li>
+            <li>
+                    <NavigationItem to="/Report" name="Report"></NavigationItem>
             </li>
           </ul>
         );

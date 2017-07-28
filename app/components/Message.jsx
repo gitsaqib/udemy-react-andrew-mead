@@ -8,9 +8,9 @@ var Message = React.createClass(
       },
       render : function(){
         return (
-          <div>
+          <h3 className="text-center">
             {this.props.message}
-          </div>
+          </h3>
         );
       }
   }

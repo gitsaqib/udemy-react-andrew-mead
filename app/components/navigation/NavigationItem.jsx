@@ -9,7 +9,7 @@ var NavigationItem = React.createClass(
       ,render : function(){
         var link = null;
         if(this.props.isIndex) {
-          link = (<IndexLink to={this.props.to}  activeClassName="active"> ~ {this.props.name} ~ : </IndexLink>);
+          link = (<IndexLink to={this.props.to}  activeClassName="active" > ~ {this.props.name} ~ : </IndexLink>);
         }else {
           link = (<Link to={this.props.to}  activeClassName="active"> ~ {this.props.name} ~ : </Link>);
         }
