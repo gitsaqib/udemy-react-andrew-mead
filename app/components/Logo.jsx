@@ -4,8 +4,6 @@ var {Link,IndexLink}  = require('react-router')
 
 var Logo = () =>
 {
-      return (
-                <IndexLink to="/"  activeClassName="active">Logo</IndexLink>
-      );
+      return (<IndexLink to="/"  className="menu-text" activeClassName="menu-text">Central Server</IndexLink>);
 };
 module.exports = Logo;
