@@ -18,7 +18,7 @@ var UserForm = React.createClass(
                 return (
                   <div >
                       <form onSubmit={this.sentItToServer}>
-                        <input type="text" ref = "name"></input>
+                        <input type="text" ref = "name" placeholder="User Id"></input>
                         <button className="button expanded hollow">Save User</button>
                       </form>
                   </div>

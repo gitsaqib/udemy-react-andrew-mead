@@ -41,7 +41,7 @@ var User = React.createClass(
       render : function(){
                 return (
                   <div >
-                      <h1 className="text-center">User  </h1>
+                      <h1 className="text-center page-title">User  </h1>
                       <UserForm callback={this.displayResults}/>
                       <Message message={this.state.message} messageType={this.state.messageType}></Message>
                   </div>

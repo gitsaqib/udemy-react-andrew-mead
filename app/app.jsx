@@ -12,6 +12,8 @@ var Report = require('./components/report/Report')
 require('style!css!foundation-sites/dist/foundation.min.css');
 $(document).foundation();
 
+require('style!css!sass!./styles/app.scss');
+
 ReactDOM.render(
   <Router history={hashHistory}>
       <Route path="/" component={Main} >
