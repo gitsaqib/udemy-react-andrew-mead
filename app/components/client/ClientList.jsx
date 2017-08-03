@@ -8,7 +8,7 @@ var ClientList = React.createClass(
                 return (
                   <div >
                     <div >
-                      <Link to="/SaveClient" className="button" >Add New</Link>
+                      <Link to='/Client?clientId=1'>Add New</Link>
                     </div>
                   </div>
                 );

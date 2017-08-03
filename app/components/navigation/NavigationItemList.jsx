@@ -10,9 +10,6 @@ var NavigationItemList = ()=>
                     <NavigationItem to="/ClientList" name="ClientList"></NavigationItem>
             </li>
             <li>
-                    <NavigationItem to="/SaveClient" name="SaveClient"></NavigationItem>
-            </li>
-            <li>
                     <NavigationItem to="/UserList" name="UserList"></NavigationItem>
             </li>
             <li>

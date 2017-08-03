@@ -14,6 +14,7 @@ var SigninInfo = React.createClass(
       if(this.refs.password.value) {
         this.refs.password.value = "";
       }
+      window.location.hash = "#/Client?clientId="+encodeURIComponent(name);
     },
     render : function(){
             return (
