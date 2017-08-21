@@ -5,16 +5,25 @@ var SigninInfo = React.createClass(
   {
     sentItToServer : function (e) {
       e.preventDefault();
-      var currentContext = this;
-      var name = this.refs.username.value ;
-      if(this.refs.username.value) {
-        this.refs.username.value = "";
+      if(this.validateInput()){
+          var currentContext = this;
+          var name = this.refs.username.value ;
+          if(this.refs.username.value) {
+            this.refs.username.value = "";
+          }
+          var password = this.refs.password.value ;
+          if(this.refs.password.value) {
+            this.refs.password.value = "";
+          }
+          window.location.hash = "#/Client?clientId="+encodeURIComponent(name);
       }
-      var password = this.refs.password.value ;
-      if(this.refs.password.value) {
-        this.refs.password.value = "";
-      }
-      window.location.hash = "#/Client?clientId="+encodeURIComponent(name);
+    },
+    validateInput : function () {
+      return
+      (
+          (this.refs.username.value && this.refs.username.value!="")
+      &&  (this.refs.password.value && this.refs.password.value!="")
+      );
     },
     render : function(){
             return (
@@ -29,11 +38,7 @@ var SigninInfo = React.createClass(
                     <li>
                       <button className = "button">Sign In</button>
                     </li>
-
                 </ul>
-
-
-
               </form>
             );
       }

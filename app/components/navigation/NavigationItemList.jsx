@@ -18,6 +18,9 @@ var NavigationItemList = ()=>
             <li>
                     <NavigationItem to="/Report" name="Report"></NavigationItem>
             </li>
+            <li>
+                    <NavigationItem to="/Countdown" name="Countdown"></NavigationItem>
+            </li>
           </ul>
         );
   }
