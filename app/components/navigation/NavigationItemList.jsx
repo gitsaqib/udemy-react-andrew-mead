@@ -21,6 +21,9 @@ var NavigationItemList = ()=>
             <li>
                     <NavigationItem to="/Countdown" name="Countdown"></NavigationItem>
             </li>
+            <li>
+                    <NavigationItem to="/Todo" name="Todo"></NavigationItem>
+            </li>
           </ul>
         );
   }

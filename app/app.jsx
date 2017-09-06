@@ -9,6 +9,7 @@ var User = require('./components/user/User')
 var UserList = require('./components/user/UserList')
 var Report = require('./components/report/Report')
 var Countdown = require('./components/countdown/Countdown')
+var TodoApp = require('./components/todo/TodoApp')
 
 require('style!css!foundation-sites/dist/foundation.min.css');
 $(document).foundation();
@@ -25,6 +26,7 @@ ReactDOM.render(
         <Route path="User" component={User} />
         <Route path="Report" component={Report} />
         <Route path="Countdown" component={Countdown} />
+        <Route path="Todo" component={TodoApp} />
       </Route>
   </Router>,
   document.getElementById('app')
