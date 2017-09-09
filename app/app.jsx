@@ -19,7 +19,7 @@ require('style!css!sass!./styles/app.scss');
 ReactDOM.render(
   <Router history={hashHistory}>
       <Route path="/" component={Main} >
-        <IndexRoute component={ClientList} />
+        <IndexRoute component={TodoApp} />
         <Route path="Client" component={Client} />
         <Route path="ClientList" component={ClientList} />
         <Route path="UserList" component={UserList} />
