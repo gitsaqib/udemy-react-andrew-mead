@@ -9,8 +9,9 @@ var TodoContainer = React.createClass({
   render : function() {
     return (
       <div>
-          <TodoList todos={this.props.state.todos}></TodoList>
-          <TodoForm></TodoForm>
+          <FilterTodo ></FilterTodo>
+          <TodoList ></TodoList>
+          <TodoForm ></TodoForm>
       </div>
     );
   }

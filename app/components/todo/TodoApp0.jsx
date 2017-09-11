@@ -9,12 +9,10 @@ store.subscribe(
     console.log("New State : ",store.getState());
   }
 );
-store.dispatch({type:"ADD_TODO",text:"hello"});
-
 var TodoApp = React.createClass({
   render : function() {
     return (
-        <div>{store.getState().todos.length}</div>
+        <div>test</div>
       );
   }
 });

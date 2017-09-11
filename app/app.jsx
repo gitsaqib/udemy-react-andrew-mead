@@ -11,7 +11,7 @@ var Report = require('./components/report/Report')
 var Countdown = require('./components/countdown/Countdown')
 var TodoApp = require('./components/todo/TodoApp')
 
-require('style!css!foundation-sites/dist/foundation.min.css');
+require('style!css!foundation-sites/dist/css/foundation.min.css');
 $(document).foundation();
 
 require('style!css!sass!./styles/app.scss');

@@ -1,5 +1,6 @@
 var React = require('react')
 var ReactDom = require('react-dom')
+var {connect} = require('react-redux')
 var Todo = require('./Todo')
 
 var TodoList = React.createClass({
@@ -11,4 +12,10 @@ var TodoList = React.createClass({
   }
 });
 
-module.exports = TodoList;
+module.exports = connect(
+  (combineReducersState)=>
+  {
+    var propsForTodoList = {todos : combineReducersState.todos};
+    return propsForTodoList
+  }
+)(TodoList) ;
