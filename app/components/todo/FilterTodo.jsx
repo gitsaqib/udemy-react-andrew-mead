@@ -6,10 +6,10 @@ var FilterTodo = React.createClass({
     render : function(){
       const todo = this.props.todo;
       return (
+        <div className="container__header">
         <div>
-        <p>
           <input ref="query" ></input>
-        </p>
+        </div>
         <p>
           <label>
             <input type="checkbox" ref="showCompleted" />

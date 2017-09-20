@@ -5,9 +5,9 @@ var TodoForm = React.createClass({
 
   render : function(){
     return (
-      <div>
+      <div className="container__footer">
         <input ref="todo" placeholder="Enter Todo" ></input>
-        <button > Add </button>
+        <button className="button expanded"> Add </button>
       </div>
     )
   }

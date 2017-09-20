@@ -1,7 +1,7 @@
 var redux = require('redux');
 var {todos} = require('./reducers');
 
-export var configure = () => {
+export var Configure = () => {
   var reducer = redux.combineReducers(
     {
       todos: todos
@@ -10,6 +10,6 @@ export var configure = () => {
   var store = redux.createStore(reducer, redux.compose(
     window.devToolsExtension ? window.devToolsExtension() : f => f
   ));
-
-  return store;
+debugger;
+ return store;
 };
