@@ -29,7 +29,7 @@ var User = React.createClass(
             console.log(data);
             currentContext.setState({message : (location+" "+data),messageType : 0});
           },function(error){
-            debugger;
+//            debugger;
             console.log("City Not Found");
             //currentContext.props.callback("City Not Found");
             console.log(error);

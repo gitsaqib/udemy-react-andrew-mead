@@ -21,7 +21,7 @@ var MessageModal = React.createClass(
           </button>
         </p>
       </div>);
-      debugger;
+//      debugger;
       var htmlStringFormedAtServer = ReactDOMServer.renderToString(modalComponent);
       console.log(htmlStringFormedAtServer);
       var $jQueryModel= $(htmlStringFormedAtServer);

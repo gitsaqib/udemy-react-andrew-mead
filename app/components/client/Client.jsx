@@ -18,7 +18,7 @@ var Client = React.createClass(
         return initialState;
       },
       componentDidMount : function(){
-        debugger;
+//        debugger;
         var clientId = this.props.location.query.clientId;
         if(clientId && clientId.length>0){
             var intClientId = parseInt(clientId);
@@ -32,7 +32,7 @@ var Client = React.createClass(
         }
       },
       componentWillReceiveProps : function(receivedProps){
-        debugger;
+//        debugger;
         var clientId = receivedProps.location.query.clientId;
         if(clientId && clientId.length>0){
             var intClientId = parseInt(clientId);

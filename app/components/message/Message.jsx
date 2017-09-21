@@ -7,11 +7,11 @@ var Message = React.createClass(
       defaultProps : function() {
         var propsOject = { messageType : "0", message : ""};
         console.log(propsOject.messageType +" : "+propsOject.message);
-        debugger;
+//        debugger;
         return propsOject;
       },
       render : function(){
-        debugger;
+//        debugger;
         console.log(this.props.messageType +" : "+this.props.message);
         var component = null;
         if(parseInt(this.props.messageType) == 1) {

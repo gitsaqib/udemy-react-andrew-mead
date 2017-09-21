@@ -10,6 +10,6 @@ export var Configure = () => {
   var store = redux.createStore(reducer, redux.compose(
     window.devToolsExtension ? window.devToolsExtension() : f => f
   ));
-debugger;
+//debugger;
  return store;
 };

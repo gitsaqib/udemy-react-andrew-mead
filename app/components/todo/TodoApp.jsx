@@ -14,7 +14,7 @@ store.dispatch({type:"ADD_TODO",text:"Go for shopping"});
 
 var TodoApp = React.createClass({
   render : function() {
-    debugger;
+//    debugger;
     var returnValue = (
       <Provider store={store}>
           <TodoContainer/>
