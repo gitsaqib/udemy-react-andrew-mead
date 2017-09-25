@@ -9,8 +9,8 @@ store.subscribe(()=>{
     console.log("New State : ",store.getState());
   }
 );
-store.dispatch({type:"ADD_TODO",text:"Drop kids to School"});
-store.dispatch({type:"ADD_TODO",text:"Go for shopping"});
+store.dispatch({type:"ADD_TODO",todo : {todo:"Drop kids to School"}});
+store.dispatch({type:"ADD_TODO",todo : {todo:"Go for shopping"}});
 
 var TodoApp = React.createClass({
   render : function() {

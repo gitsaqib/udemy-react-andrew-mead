@@ -1,6 +1,7 @@
 var React = require('react')
 var ReactDom = require('react-dom')
 var {connect} = require('react-redux');
+var DataUtility = require('../../data/DataUtility');
 
 var TodoForm = React.createClass({
 
@@ -8,8 +9,14 @@ var TodoForm = React.createClass({
       var {dispatch} = this.props;
       var text=this.refs.todo.value;
       this.refs.todo.value = "";
-      dispatch({type:"ADD_TODO",text});
-  },  
+//      dispatch({type:"ADD_TODO",text});
+      var todo = { todo:text}
+      var asyncCall = (dispatch,getState)=>{
+          var promise = DataUtility.asynchronousSaveToDo(todo);
+          promise.then(()=>dispatch({type:"ADD_TODO",todo : todo}));
+      };
+      dispatch(asyncCall);
+  },
   render : function(){
     return (
       <div className="container__footer">
