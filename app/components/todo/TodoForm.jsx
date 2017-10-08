@@ -1,7 +1,7 @@
 var React = require('react')
 var ReactDom = require('react-dom')
 var {connect} = require('react-redux');
-var DataUtility = require('../../data/DataUtility');
+var DataUtility = require('../../../api/DataUtility');
 
 var TodoForm = React.createClass({
 

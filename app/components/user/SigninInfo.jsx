@@ -27,19 +27,21 @@ var SigninInfo = React.createClass(
     },
     render : function(){
             return (
-              <form onSubmit={this.sentItToServer}>
-                <ul className = "menu">
-                    <li>
-                      <input type="text" ref = "username" placeholder="User Id"></input>
-                    </li>
-                    <li>
-                      <input type="password" ref = "password" placeholder="password"></input>
-                    </li>
-                    <li>
-                      <button className = "button">Sign In</button>
-                    </li>
-                </ul>
-              </form>
+                    <div class="row column align-center medium-6 large-4 container-padded">
+                    <form className="log-in-form">
+                        <h4 className="text-center">Log in with you email account</h4>
+                        <label>Email
+                            <input type="text" placeholder="sa" ref="username"></input>
+                        </label>
+                        <label>Password
+                            <input type="password" placeholder="Password" ></input>
+                        </label>
+                        <input id="show-password" type="checkbox"></input>
+                        <label for="show-password">Show password</label>
+                        <p><input type="submit" className="button expanded" value="Log in"></input></p>
+                        <p className="text-center"><a href="#">Forgot your password?</a></p>
+                    </form>
+                 </div>
             );
       }
   }

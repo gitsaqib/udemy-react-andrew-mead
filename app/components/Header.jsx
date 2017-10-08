@@ -1,7 +1,8 @@
 var React = require('react')
 var ReactDOM = require('react-dom')
 var NavigationItemList = require('./navigation/NavigationItemList')
-var SigninInfo = require('./user/SigninInfo')
+var Avatar = require('./user/Avatar')
+var Logout = require('./user/Logout')
 var Logo = require('./Logo')
 
 var Header = (props) =>
@@ -17,7 +18,12 @@ var Header = (props) =>
               </ul>
             </div>
             <div className="top-bar-right">
-              <SigninInfo />
+                <ul className="menu">
+                <li><Avatar /></li>
+                <li>
+                    <Logout/>
+                </li>
+              </ul>
             </div>
 
           </div>
