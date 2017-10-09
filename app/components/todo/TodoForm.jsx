@@ -2,6 +2,7 @@ var React = require('react')
 var ReactDom = require('react-dom')
 var {connect} = require('react-redux');
 var DataUtility = require('../../../api/DataUtility');
+var Actions = require('../../actions/Actions')
 
 var TodoForm = React.createClass({
 
@@ -13,7 +14,7 @@ var TodoForm = React.createClass({
       var todo = { todo:text}
       var asyncCall = (dispatch,getState)=>{
           var promise = DataUtility.asynchronousSaveToDo(todo);
-          promise.then(()=>dispatch({type:"ADD_TODO",todo : todo}));
+          promise.then(()=>dispatch(Actions.addTodo(todo)));
       };
       dispatch(asyncCall);
   },
